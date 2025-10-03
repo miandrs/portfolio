@@ -13,13 +13,10 @@ export interface ContactForm {
   providedIn: 'root'
 })
 export class ContactService {
-  protected serviceID: string = "service_gxbbfr3";
-  protected templateID: string = "template_4h4msfe";
-  protected pubKey: string = "6mCGKDXjUx1PU9H_I";
 
   constructor() { 
     init({
-      publicKey: this.pubKey,
+      publicKey: process.env.PUB_KEY,
       blockHeadless: true,
       blockList: {
         list: ['foo@emailjs.com', 'bar@emailjs.com'],
@@ -33,6 +30,6 @@ export class ContactService {
   }
 
   sendContactForm(formData: any) {
-    return emailjs.send(this.serviceID, this.templateID, formData);
+    return emailjs.send(process.env.SERVICE_ID, process.env.TEMPLATE_ID, formData);
   }
 }
