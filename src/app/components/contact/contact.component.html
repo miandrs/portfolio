@@ -1,0 +1,149 @@
+<section id="contact" class="section contact-section">
+    <div class="container">
+    <h2 class="section-title">Collaborons ensemble</h2>
+    <p class="section-subtitle">
+        Je reste à l’écoute de nouvelles opportunités et de projets stimulants. N’hésitez pas à me contacter pour en discuter.
+    </p>
+    
+    <div class="contact-content">
+        <div class="contact-info">
+        <h3 class="contact-title">Contactez-moi</h3>
+        <p class="contact-text">
+            Un projet, une collaboration ou juste un message ? Je serais ravi d’échanger avec vous.
+        </p>
+        
+        <div class="contact-methods">
+            <a href="mailto:alex.chen.dev&#64;example.com" class="contact-method">
+            <div class="contact-icon">📧</div>
+            <div class="contact-details">
+                <h4>Email</h4>
+                <p>miandrsruno&#64;gmail.com</p>
+            </div>
+            </a>
+            
+            <a href="https://www.linkedin.com/in/jean-bruno-rakotomiandrisoa-93496721b/" target="_blank" class="contact-method">
+            <div class="contact-icon">💼</div>
+            <div class="contact-details">
+                <h4>LinkedIn</h4>
+                <p>linkedin.com/in/jean-bruno-rakotomiandrisoa-93496721b</p>
+            </div>
+            </a>
+            
+            <a href="https://github.com/miandrs" target="_blank" class="contact-method">
+            <div class="contact-icon">🐱</div>
+            <div class="contact-details">
+                <h4>GitHub</h4>
+                <p>github.com/miandrs</p>
+            </div>
+            </a>
+        </div>
+        
+        <div class="resume-section">
+            <h4>Téléchargez mon CV</h4>
+            <a href="#" class="btn btn-outline resume-btn" (click)="downloadResume()">
+            📄 PDF à télécharger
+            </a>
+        </div>
+        </div>
+        
+        <div class="contact-form-container">
+        <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+            <!-- Name Field -->
+            <div class="form-group">
+                <label for="name">Nom</label>
+                <input
+                type="text"
+                id="name"
+                name="name"
+                [(ngModel)]="formData.name"
+                #name="ngModel"
+                required
+                minlength="2"
+                class="form-control"
+                [class.error]="name.invalid && name.touched"
+                />
+                <div class="error-message" *ngIf="name.touched && name.invalid">
+                <div *ngIf="name.errors?.['required']">Le nom est réquis</div>
+                <div *ngIf="name.errors?.['minlength']">Le nom doit contenir au moins 2 caractères</div>
+                </div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                type="email"
+                id="email"
+                name="email"
+                [(ngModel)]="formData.email"
+                #email="ngModel"
+                required
+                email
+                class="form-control"
+                [class.error]="email.invalid && email.touched"
+                />
+                <div class="error-message" *ngIf="email.touched && email.invalid">
+                <div *ngIf="email.errors?.['required']">L'email est requis</div>
+                <div *ngIf="email.errors?.['email']">Une adresse e-mail valide est requise</div>
+                </div>
+            </div>
+
+            <!-- Subject Field -->
+            <div class="form-group">
+                <label for="subject">Sujet</label>
+                <input
+                type="text"
+                id="subject"
+                name="subject"
+                [(ngModel)]="formData.subject"
+                #subject="ngModel"
+                required
+                minlength="3"
+                class="form-control"
+                [class.error]="subject.invalid && subject.touched"
+                />
+                <div class="error-message" *ngIf="subject.touched && subject.invalid">
+                <div *ngIf="subject.errors?.['required']">Veuillez renseigner un sujet</div>
+                <div *ngIf="subject.errors?.['minlength']">Le sujet doit contenir au moins 3 caractères</div>
+                </div>
+            </div>
+
+            <!-- Message Field -->
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                id="message"
+                name="message"
+                [(ngModel)]="formData.message"
+                #message="ngModel"
+                required
+                minlength="10"
+                rows="5"
+                class="form-control"
+                [class.error]="message.invalid && message.touched"
+                ></textarea>
+                <div class="error-message" *ngIf="message.touched && message.invalid">
+                <div *ngIf="message.errors?.['required']">Veuillez entrer un message</div>
+                <div *ngIf="message.errors?.['minlength']">Le message doit contenir au moins 10 caractères</div>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button
+                type="submit"
+                class="btn btn-primary submit-btn"
+                [disabled]="contactForm.invalid || isSubmitting"
+            >
+                <span *ngIf="!isSubmitting">Envoyer Votre Message</span>
+                <span *ngIf="isSubmitting">Envoi en cours...</span>
+            </button>
+
+            <!-- Success Message -->
+            <div class="success-message" *ngIf="showSuccess">
+                ✅ Merci ! Votre message a bien été envoyé.
+            </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</section>

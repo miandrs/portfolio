@@ -1,0 +1,127 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding-top: 80px;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+.highlight {
+    background: linear-gradient(135deg, #2563eb, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.smaller-text {
+    font-size: 0.6em; /* Adjust this value as needed */
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+    margin-left: auto;
+}
+
+.profile-avatar {
+    margin-bottom: 1.5rem;
+}
+
+.avatar-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #e5e7eb;
+}
+
+.profile-info h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.profile-info > p {
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+    }
+    
+    .hero-title {
+    font-size: 2.5rem;
+    }
+    
+    .hero-description {
+    font-size: 1.1rem;
+    }
+    
+    .hero-actions {
+    justify-content: center;
+    }
+    
+    .profile-card {
+    margin: 0 auto;
+    }
+}

@@ -1,0 +1,44 @@
+<section id="projects" class="section">
+    <div class="container">
+    <h2 class="section-title">Projets phares</h2>
+    <p class="section-subtitle">
+        Voici quelques-uns des projets sur lesquels j'ai travaillé récemment, mettant en valeur mes compétences et ma créativité.
+    </p>
+    
+    <div class="projects-grid">
+        <div class="project-card" *ngFor="let project of projects">
+        <div class="project-image">
+            <img [src]="project.image" [alt]="project.title" class="project-img">
+            <div class="project-overlay">
+            <div class="project-links">
+                <a [href]="project.liveUrl" target="_blank" class="project-link" *ngIf="project.liveUrl">
+                <span class="link-icon">🔗</span>
+                Live Demo
+                </a>
+                <a [href]="project.githubUrl" target="_blank" class="project-link">
+                <span class="link-icon">📱</span>
+                GitHub
+                </a>
+            </div>
+            </div>
+        </div>
+        
+        <div class="project-content">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <p class="project-description">{{ project.description }}</p>
+            
+            <div class="project-tech">
+            <span class="tech-tag" *ngFor="let tech of project.technologies">{{ tech }}</span>
+            </div>
+            
+            <div class="project-features">
+            <h4>Key Features:</h4>
+            <ul>
+                <li *ngFor="let feature of project.features">{{ feature }}</li>
+            </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</section>
