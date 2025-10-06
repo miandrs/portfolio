@@ -11,46 +11,64 @@ import { CommonModule } from '@angular/common';
 export class ProjectsComponent {
   projects = [
     {
-      title: 'Task Manager App',
-      description: 'A responsive task management application built with React and TypeScript. Features include drag-and-drop functionality, local storage persistence, and a clean, intuitive interface.',
-      image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['React', 'TypeScript', 'CSS3', 'Local Storage'],
+      title: 'Bus Manager App',
+      description: 'C\'est une solution web et mobile complète développée pour moderniser la gestion des transports urbains. Elle vise à améliorer la mobilité en rendant les services de transport plus efficaces, traçables et accessibles, tout en intégrant des outils numériques modernes.',
+      image: 'assets/projects/taggeo.jpeg',
+      technologies: ['Spring Boot', 'MySQL', 'MongoDB', 'Express', 'Angular', 'Node.js', 'TypeScript', 'REST API', 'Flutter'],
       features: [
-        'Create, edit, and delete tasks',
-        'Drag & drop task organization',
-        'Filter by priority and status',
-        'Responsive design for all devices'
+        'Suivi GPS en temps réel des bus',
+        'Tableau de bord intéractif pour les administrateurs',
+        'Billetterie numérique sécurisée',
+        'Paiement mobile intégré via MVola',
+        //'Application mobile pour les: Passagers | Receveurs | Cash Points'
       ],
       liveUrl: 'https://example-task-manager.netlify.app',
-      githubUrl: 'https://github.com/alexchen/task-manager'
+      githubUrl: null
     },
+    // {
+    //   title: 'Site Vitrine De MI.KS Agency',
+    //   description: 'C\'est un site vitrine professionnel conçu pour une agence marketing souhaitant promouvoir ses services, ses réalisations et attirer de nouveaux clients. Le site met en avant une identité visuelle forte, une navigation fluide et une expérience utilisateur optimisée, grâce au framework Angular.',
+    //   image: 'assets/projects/mi-ks.png',
+    //   technologies: ['Angular', 'Typescript', 'Responsive Design'],
+    //   features: [
+    //     'Interface responsive',
+    //     'Présentation des services',
+    //     'Formulaire de contact intélligent avec validation en temps réel',
+    //     'Intégration des réseaux sociaux',
+    //     'Optimisation SEO pour le référencement naturel'
+    //   ],
+    //   liveUrl: 'https://example-weather-app.netlify.app',
+    //   githubUrl: null
+    // },
     {
-      title: 'Weather Dashboard',
-      description: 'A modern weather application that provides current conditions and forecasts. Built with vanilla JavaScript and integrates with OpenWeatherMap API for real-time data.',
-      image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['JavaScript', 'CSS3', 'REST API', 'Chart.js'],
+      title: 'E-Commerce',
+      description: 'Développement d\'une application e-commerce complète, composée d\'un Front-Office pour les utilisateurs, d\'un Back-Office pour l\'administration et d\'une API REST sécurisée. Le projet est conçu pour offrir une expérience fluide, mobile-friendly, et une gestion efficace des produits et commandes.',
+      image: 'assets/projects/agrohelp-front-office.png',
+      technologies: ['MongoDB', 'Express', 'Angular', 'React', 'Node.js', 'TypeScript', 'Responsive Design'],
       features: [
-        'Current weather conditions',
-        '5-day weather forecast',
-        'Location-based weather data',
-        'Interactive weather charts'
+        'Interface utilisateur fluide avec React',
+        'Dashboard avec Angular (gestion des produits, commandes)',
+        'API RESTFUL documentée avec Swagger',
+        'Système de paiement intégré avec MVola',
+        'Design responsive pour mobile et desktop'
       ],
-      liveUrl: 'https://example-weather-app.netlify.app',
-      githubUrl: 'https://github.com/alexchen/weather-dashboard'
+      liveUrl: 'https://agrohelp-consulting.render.com',
+      githubUrl: 'https://github.com/miandrs/portfolio'
     },
     {
       title: 'Portfolio Website',
-      description: 'This very portfolio website you\'re viewing! Built with Angular and showcases modern web development practices with clean design and smooth animations.',
-      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['Angular', 'TypeScript', 'CSS3', 'Responsive Design'],
+      description: 'Ce portfolio est une application web dynamique développée avec Angular, qui me permet de présenter mon parcours, mes compétences, mes projets et mes services de manière professionnelle et interactive. Il reflète à la fois mon identité visuelle et mes compétences techniques, tout en offrant une expérience utilisateur fluide, responsive et moderne.',
+      image: 'assets/logo/logo-init.png',
+      technologies: ['Angular', 'TypeScript', 'Responsive Design'],
       features: [
-        'Fully responsive design',
-        'Smooth scroll navigation',
-        'Interactive project showcase',
-        'Contact form validation'
+        'Design entièrement responsive',
+        'Navigation à défilement fluide',
+        'Présentation interactive des projets',
+        'Section compétences techniques avec barres de progression',
+        'Formulaire de contact dynamique'
       ],
       liveUrl: null,
-      githubUrl: 'https://github.com/alexchen/portfolio'
+      githubUrl: 'https://github.com/miandrs/portfolio'
     }
   ];
 }

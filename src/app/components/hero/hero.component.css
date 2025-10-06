@@ -13,6 +13,10 @@
     align-items: center;
 }
 
+.hero-text {
+    animation: fadeInUp 1s ease-out;
+}
+
 .hero-title {
     font-size: 3.5rem;
     font-weight: 700;
@@ -53,6 +57,7 @@
     text-align: center;
     max-width: 300px;
     margin-left: auto;
+    animation: fadeInRight 1s ease-out 0.3s both;
 }
 
 .profile-avatar {
@@ -102,11 +107,34 @@
     color: #6b7280;
 }
 
+@keyframes fadeInUp {
+    from {
+    opacity: 0;
+    transform: translateY(30px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+    opacity: 0;
+    transform: translateX(30px);
+    }
+    to {
+    opacity: 1;
+    transform: translateX(0);
+    }
+}
+
 @media (max-width: 768px) {
     .hero-content {
     grid-template-columns: 1fr;
     gap: 2rem;
     text-align: center;
+    margin-top: 5rem;
     }
     
     .hero-title {

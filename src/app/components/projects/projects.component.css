@@ -85,6 +85,7 @@
 
 .project-content {
     padding: 2rem;
+    border-top: 5px #f8fafc solid;
 }
 
 .project-title {

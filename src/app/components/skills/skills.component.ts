@@ -13,10 +13,10 @@ export class SkillsComponent {
     {
       title: 'Frontend',
       skills: [
+        { name: 'Angular', level: 80 },
+        { name: 'Flutter', level: 65 },
         { name: 'HTML5 & CSS3', level: 90 },
-        { name: 'Bootstrap', level: 75 },
-        { name: 'JavaScript', level: 85 },
-        { name: 'Angular', level: 70 }
+        { name: 'React', level: 70 }
       ]
     },
     {
@@ -29,22 +29,21 @@ export class SkillsComponent {
       ]
     },
     {
-      title: 'Outils De Développement',
+      title: 'Toolchain',
       skills: [
         { name: 'Git & GitHub', level: 80 },
-        { name: 'npm - maven', level: 85 },
-        { name: 'REST API', level: 90 },
+        { name: 'NPM - Maven', level: 85 },
+        { name: 'Postman', level: 90 },
         { name: 'Swagger(OpenAPI)', level: 85 },
       ]
     }
   ];
 
   tools = [
-    { name: 'VS Code', icon: '💻' },
-    { name: 'Postman/Bruno', icon: '📮' },
-    { name: 'DBSchema', icon: '💾' },
-    { name: 'MongoDB Compass', icon: '🗂️' },
-    { name: 'MySQL', icon: '🛢' }
+    { name: 'MySQL', icon: 'assets/icons/mysql.png' },
+    { name: 'MongoDB', icon: 'assets/icons/compass.ico' },
+    { name: 'UML', icon: 'assets/icons/dbschema.png' },
+    { name: 'Mérise', icon: 'assets/icons/dbschema.png' }
   ];
 
   getSkillColor(level: number): string {

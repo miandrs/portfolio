@@ -12,7 +12,7 @@
             <div class="skill-item" *ngFor="let skill of category.skills">
             <div class="skill-info">
                 <span class="skill-name">{{ skill.name }}</span>
-                <span class="skill-level">{{ skill.level }}%</span>
+                <!-- <span class="skill-level">{{ skill.level }}%</span> -->
             </div>
             <div class="skill-bar">
                 <div class="skill-progress" 
@@ -25,10 +25,10 @@
     </div>
     
     <div class="tools-section">
-        <h3 class="tools-title">Outils & Environment</h3>
+        <h3 class="tools-title">Architecture & Modélisation</h3>
         <div class="tools-grid">
         <div class="tool-item" *ngFor="let tool of tools">
-            <div class="tool-icon">{{ tool.icon }}</div>
+            <img [src]="tool.icon" alt="icon" class="tool-icon">
             <span class="tool-name">{{ tool.name }}</span>
         </div>
         </div>

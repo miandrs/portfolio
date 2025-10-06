@@ -67,7 +67,7 @@
 
 .workspace-img {
     width: 100%;
-    height: 400px;
+    height: 350px;
     object-fit: cover;
 }
 
@@ -101,20 +101,47 @@
 }
 
 .tech-icon {
-    width: 60px;        /* adjust size as needed */
-    height: 60px;
     object-fit: contain;
     border-radius: 12px;
-    background-color: white; /* optional: background for contrast */
+    /*background-color: white; /* optional: background for contrast */
     padding: 1px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s;
 }
 
-.tech-icon:hover {
-    transform: scale(1.1);
+.angular, .typescript {
+    width: 50px;        
+    height: 50px;
 }
 
+.node {
+    width: 60px;        
+    height: 60px;
+}
+
+.java {
+    width: 110px;
+    height: 110px;
+}
+
+.node, .express {
+    background-color: white;
+}
+
+.express {
+    width: 130px;
+    height: 40px;
+}
+
+.spring {
+    width: 140px;
+    height: 50px;
+}
+
+.tech-icon:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
 @keyframes float {
     0%, 100% { transform: translateY(0px); }
