@@ -22,7 +22,7 @@ export class ProjectsComponent {
         'Paiement mobile intégré via MVola',
         //'Application mobile pour les: Passagers | Receveurs | Cash Points'
       ],
-      liveUrl: 'https://example-task-manager.netlify.app',
+      liveUrl: null,
       githubUrl: null
     },
     // {
