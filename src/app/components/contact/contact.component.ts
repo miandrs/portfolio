@@ -11,6 +11,7 @@ import { ContactService } from '../../services/contact.service';
   styleUrl: 'contact.component.css'
 })
 export class ContactComponent {
+  cv_link: string = 'https://drive.google.com/file/d/1yhb8COgOrhchpceid7CKnIsyFUhRM_HE/view?usp=drive_link';
   formData = {
     name: '',
     email: '',
@@ -55,10 +56,5 @@ export class ContactComponent {
       subject: '',
       message: ''
     };
-  }
-  
-  downloadResume() {
-    // In a real application, this would download an actual resume file
-    alert('Resume download would start here. Please add your actual resume file.');
   }
 }
