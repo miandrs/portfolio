@@ -52,8 +52,8 @@ export class ProjectsComponent {
         'Système de paiement intégré avec MVola',
         'Design responsive pour mobile et desktop'
       ],
-      liveUrl: 'https://agrohelp-consulting.render.com',
-      githubUrl: 'https://github.com/miandrs/portfolio'
+      liveUrl: 'https://agrohelp-consulting.onrender.com',
+      githubUrl: null
     },
     {
       title: 'Portfolio Website',
