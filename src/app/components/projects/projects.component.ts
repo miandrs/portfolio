@@ -13,7 +13,7 @@ export class ProjectsComponent {
     {
       title: 'Bus Manager App',
       description: 'C\'est une solution web et mobile complète développée pour moderniser la gestion des transports urbains. Elle vise à améliorer la mobilité en rendant les services de transport plus efficaces, traçables et accessibles, tout en intégrant des outils numériques modernes.',
-      image: 'assets/projects/taggeo.jpeg',
+      image: 'assets/projects/taggeo.png',
       technologies: ['Spring Boot', 'MySQL', 'MongoDB', 'Express', 'Angular', 'Node.js', 'TypeScript', 'REST API', 'Flutter'],
       features: [
         'Suivi GPS en temps réel des bus',
