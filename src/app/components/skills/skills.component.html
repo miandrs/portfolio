@@ -28,7 +28,7 @@
         <h3 class="tools-title">Architecture & Modélisation</h3>
         <div class="tools-grid">
         <div class="tool-item" *ngFor="let tool of tools">
-            <img [src]="tool.icon" alt="icon" class="tool-icon">
+            <img [ngSrc]="tool.icon" width="40" height="40" alt="icon" class="tool-icon" loading="lazy">
             <span class="tool-name">{{ tool.name }}</span>
         </div>
         </div>

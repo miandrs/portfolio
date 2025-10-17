@@ -8,6 +8,7 @@ import { ProjectsComponent } from './app/components/projects/projects.component'
 import { ContactComponent } from './app/components/contact/contact.component';
 import { FooterComponent } from './app/components/footer/footer.component';
 import { CommonModule } from '@angular/common';
+import { provideHttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -125,4 +126,8 @@ export class App implements OnInit {
   }
 }
 
-bootstrapApplication(App);
+bootstrapApplication(App, {
+  providers: [
+    provideHttpClient()
+  ]
+});

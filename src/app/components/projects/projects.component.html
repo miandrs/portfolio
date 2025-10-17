@@ -8,7 +8,7 @@
     <div class="projects-grid">
         <div class="project-card" *ngFor="let project of projects">
         <div class="project-image">
-            <img [src]="project.image" [alt]="project.title" class="project-img">
+            <img [ngSrc]="project.image" width="100" height="100" [alt]="project.title" class="project-img" loading="lazy">
             <div class="project-overlay">
             <div class="project-links">
                 <a [href]="project.liveUrl" target="_blank" class="project-link" *ngIf="project.liveUrl">

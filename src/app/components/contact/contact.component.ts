@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ContactService } from '../../services/contact.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -11,7 +12,8 @@ import { ContactService } from '../../services/contact.service';
   styleUrl: 'contact.component.css'
 })
 export class ContactComponent {
-  cv_link: string = 'https://drive.google.com/file/d/1yhb8COgOrhchpceid7CKnIsyFUhRM_HE/view?usp=drive_link';
+  // keep the original string URL so we can pass a string to window.open
+  pdfUrl: string = 'assets/cv/Rakotomiandrisoa_Jean_Bruno.pdf';
   formData = {
     name: '',
     email: '',
@@ -21,6 +23,8 @@ export class ContactComponent {
   
   isSubmitting = false;
   showSuccess = false;
+
+  private http = inject(HttpClient);
 
   constructor(private contactService: ContactService) {}
   
@@ -56,5 +60,22 @@ export class ContactComponent {
       subject: '',
       message: ''
     };
+  }
+
+  openPdfCV() {
+    this.http.get(this.pdfUrl, { responseType: 'blob' })
+      .subscribe({
+        next: (response: Blob) => {
+          // 2. Create a temporary URL for the blob
+          const fileURL = URL.createObjectURL(response);
+          
+          // 3. Open a new tab
+          window.open(fileURL, '_blank');
+        },
+        error: (err) => {
+          console.error('Error fetching PDF:', err);
+          // Handle error, maybe alert the user
+        }
+    });
   }
 }

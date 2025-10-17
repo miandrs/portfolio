@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgOptimizedImage],
   templateUrl: 'projects.component.html',
   styleUrl: 'projects.component.css'
 })
@@ -13,7 +13,7 @@ export class ProjectsComponent {
     {
       title: 'Bus Manager App',
       description: 'C\'est une solution web et mobile complète développée pour moderniser la gestion des transports urbains. Elle vise à améliorer la mobilité en rendant les services de transport plus efficaces, traçables et accessibles, tout en intégrant des outils numériques modernes.',
-      image: 'assets/projects/taggeo.png',
+      image: 'assets/projects/taggeo.jpeg',
       technologies: ['Spring Boot', 'MySQL', 'MongoDB', 'Express', 'Angular', 'Node.js', 'TypeScript', 'REST API', 'Flutter'],
       features: [
         'Suivi GPS en temps réel des bus',
@@ -43,7 +43,7 @@ export class ProjectsComponent {
     {
       title: 'E-Commerce',
       description: 'Développement d\'une application e-commerce complète, composée d\'un Front-Office pour les utilisateurs, d\'un Back-Office pour l\'administration et d\'une API REST sécurisée. Le projet est conçu pour offrir une expérience fluide, mobile-friendly, et une gestion efficace des produits et commandes.',
-      image: 'assets/projects/agrohelp-front-office.png',
+      image: 'assets/projects/agrohelp-front-office.jpeg',
       technologies: ['MongoDB', 'Express', 'Angular', 'React', 'Node.js', 'TypeScript', 'Responsive Design'],
       features: [
         'Interface utilisateur fluide avec React',
