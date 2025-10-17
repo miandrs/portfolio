@@ -1,4 +1,4 @@
-import { APP_INITIALIZER, Component, DOCUMENT, HostListener, Inject, OnInit } from '@angular/core';
+import { Component, DOCUMENT, HostListener, Inject, OnInit } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { HeaderComponent } from './app/components/header/header.component';
 import { HeroComponent } from './app/components/hero/hero.component';
@@ -9,7 +9,6 @@ import { ContactComponent } from './app/components/contact/contact.component';
 import { FooterComponent } from './app/components/footer/footer.component';
 import { CommonModule } from '@angular/common';
 import { provideHttpClient } from '@angular/common/http';
-import { inject } from '@vercel/analytics';
 
 @Component({
   selector: 'app-root',
@@ -104,6 +103,7 @@ export class App implements OnInit {
 
   ngOnInit() {
     // You can optionally call a check here if the user loads the page mid-way
+    
   }
 
   // Use @HostListener to bind to the 'window:scroll' event
@@ -129,12 +129,6 @@ export class App implements OnInit {
 
 bootstrapApplication(App,{  
   providers: [
-    provideHttpClient(),
-    {
-      provide: APP_INITIALIZER,
-      useFactory: () => () => {
-        inject();
-      }
-    }
+    provideHttpClient()
   ]
 }).catch(err => console.error(err));
