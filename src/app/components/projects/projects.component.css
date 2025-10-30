@@ -146,15 +146,15 @@
 
 @media (max-width: 768px) {
     .projects-grid {
-    grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
     
     .project-links {
-    flex-direction: column;
-    gap: 0.5rem;
+        flex-direction: column;
+        gap: 0.5rem;
     }
     
     .project-link {
-    justify-content: center;
+        justify-content: center;
     }
 }

@@ -150,28 +150,28 @@
 
 @media (max-width: 768px) {
     .about-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
     
     .highlights {
-    gap: 1rem;
+        gap: 1rem;
     }
     
     .highlight-item {
-    flex-direction: column;
-    text-align: center;
+        flex-direction: column;
+        text-align: center;
     }
     
     .highlight-icon {
-    align-self: center;
+        align-self: center;
     }
     
     .workspace-img {
-    height: 250px;
+        height: 250px;
     }
     
     .floating-element {
-    display: none;
+        display: none;
     }
 }

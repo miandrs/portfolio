@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PdfCvService } from '../../services/pdf-cv.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: 'footer.component.css'
 })
 export class FooterComponent {
+  constructor(private pdfCvService: PdfCvService) {}
   downloadResume() {
-    alert('Resume download would start here. Please add your actual resume file.');
+    this.pdfCvService.openPdfCV();
   }
 }

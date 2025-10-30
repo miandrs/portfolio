@@ -105,25 +105,25 @@
 
 @media (max-width: 768px) {
     .nav-links {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background: white;
-    flex-direction: column;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transform: translateY(-100vh);
-    opacity: 0;
-    transition: all 0.3s ease;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transform: translateY(-100vh);
+        opacity: 0;
+        transition: all 0.3s ease;
     }
     
     .nav-links.nav-open {
-    transform: translateY(0);
-    opacity: 1;
+        transform: translateY(0);
+        opacity: 1;
     }
     
     .mobile-menu-btn {
-    display: flex;
+        display: flex;
     }
 }
