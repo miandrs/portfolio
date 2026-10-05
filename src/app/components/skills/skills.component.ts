@@ -80,9 +80,7 @@ export class SkillsComponent {
     { name: 'UML', icon: 'assets/icons/dbschema.png' },
     { name: 'Mérise', icon: 'assets/icons/dbschema.png' },
     { name: 'MySQL', icon: 'assets/icons/mysql.png' },
-    { name: 'MongoDB', icon: 'assets/icons/compass.ico' },
-    { name: 'Keycloak', emoji: '🔑' },
-    { name: 'Kibana', emoji: '📊' }
+    { name: 'MongoDB', icon: 'assets/icons/compass.ico' }
   ];
 
   getSkillColor(level: number): string {
