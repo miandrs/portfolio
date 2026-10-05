@@ -9,46 +9,58 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
   styleUrl: 'projects.component.css'
 })
 export class ProjectsComponent {
+  private readonly initialCount = 3;
+  private readonly step = 3;
+  visibleCount = this.initialCount;
   projects = [
     {
-      title: 'Bus Manager App',
-      description: 'C\'est une solution web et mobile complète développée pour moderniser la gestion des transports urbains. Elle vise à améliorer la mobilité en rendant les services de transport plus efficaces, traçables et accessibles, tout en intégrant des outils numériques modernes.',
-      image: 'assets/projects/taggeo.jpeg',
-      technologies: ['Spring Boot', 'MySQL', 'MongoDB', 'Express', 'Angular', 'Node.js', 'TypeScript', 'REST API', 'Flutter'],
+      title: 'Plateforme SaaS Multi-utilisateurs',
+      description: 'Développement d\'une plateforme web sécurisée multi-utilisateurs avec Spring Boot, Angular, MySQL et Keycloak, intégrant une authentification sécurisée et un contrôle d\'accès par rôles.',
+      image: 'assets/projects/saas.jpeg',
+      technologies: ['Spring Boot', 'Angular', 'MySQL', 'Keycloak', 'JWT', 'OAuth2'],
       features: [
-        'Suivi GPS en temps réel des bus',
-        'Tableau de bord intéractif pour les administrateurs',
-        'Billetterie numérique sécurisée',
-        'Paiement mobile intégré via MVola',
-        //'Application mobile pour les: Passagers | Receveurs | Cash Points'
+        'Authentification sécurisée (JWT / OAuth2)',
+        'Contrôle d\'accès par rôles (RBAC)',
+        'Gestion multi-utilisateurs'
       ],
       liveUrl: null,
       githubUrl: null
     },
-    // {
-    //   title: 'Site Vitrine De MI.KS Agency',
-    //   description: 'C\'est un site vitrine professionnel conçu pour une agence marketing souhaitant promouvoir ses services, ses réalisations et attirer de nouveaux clients. Le site met en avant une identité visuelle forte, une navigation fluide et une expérience utilisateur optimisée, grâce au framework Angular.',
-    //   image: 'assets/projects/mi-ks.png',
-    //   technologies: ['Angular', 'Typescript', 'Responsive Design'],
-    //   features: [
-    //     'Interface responsive',
-    //     'Présentation des services',
-    //     'Formulaire de contact intélligent avec validation en temps réel',
-    //     'Intégration des réseaux sociaux',
-    //     'Optimisation SEO pour le référencement naturel'
-    //   ],
-    //   liveUrl: 'https://example-weather-app.netlify.app',
-    //   githubUrl: null
-    // },
     {
-      title: 'E-Commerce',
-      description: 'Développement d\'une application e-commerce complète, composée d\'un Front-Office pour les utilisateurs, d\'un Back-Office pour l\'administration et d\'une API REST sécurisée. Le projet est conçu pour offrir une expérience fluide, mobile-friendly, et une gestion efficace des produits et commandes.',
-      image: 'assets/projects/agrohelp-front-office.jpeg',
-      technologies: ['MongoDB', 'Express', 'Angular', 'React', 'Node.js', 'TypeScript', 'Responsive Design'],
+      title: 'Taggéo - Mobilité urbaine',
+      description: 'Digitalisation de la mobilité urbaine pour optimiser la gestion des auto-bus. Développement d\'applications web et d\'API RESTful, avec une interface ergonomique conçue en collaboration avec l\'équipe produit.',
+      image: 'assets/projects/taggeo.jpeg',
+      technologies: ['Spring Boot', 'Keycloak', 'JPA / Hibernate', 'MySQL', 'Angular', 'MongoDB', 'Express', 'Node.js'],
       features: [
-        'Interface utilisateur fluide avec React',
-        'Dashboard avec Angular (gestion des produits, commandes)',
-        'API RESTFUL documentée avec Swagger',
+        'Suivi GPS en temps réel des bus',
+        'Tableau de bord interactif pour les administrateurs',
+        'Billetterie numérique sécurisée',
+        'Paiement mobile intégré via MVola'
+      ],
+      liveUrl: null,
+      githubUrl: null
+    },
+    {
+      title: 'Jirakaiky - Pipeline de données',
+      description: 'Mise en place d\'un pipeline automatisé avec n8n pour synchroniser les données MySQL vers Elasticsearch, et création de dashboards analytiques sous Kibana.',
+      image: 'assets/projects/n8n.jpeg',
+      technologies: ['n8n', 'MySQL', 'Elasticsearch', 'Kibana'],
+      features: [
+        'Synchronisation automatisée MySQL vers Elasticsearch',
+        'Dashboards analytiques sous Kibana',
+        'Workflows d\'automatisation avec n8n'
+      ],
+      liveUrl: null,
+      githubUrl: null
+    },
+    {
+      title: 'Plateforme E-commerce Agricole',
+      description: 'Plateforme de vente en ligne de produits fermiers visant à valoriser le monde rural. Application web et API RESTful développées avec la stack MEAN, dans le cadre de la digitalisation des activités de l\'entreprise.',
+      image: 'assets/projects/agrohelp-front-office.jpeg',
+      technologies: ['MongoDB', 'Express', 'Angular', 'Node.js', 'REST API'],
+      features: [
+        'Vente en ligne de produits fermiers',
+        'Back-office d\'administration (produits, commandes)',
         'Système de paiement intégré avec MVola',
         'Design responsive pour mobile et desktop'
       ],
@@ -56,19 +68,41 @@ export class ProjectsComponent {
       githubUrl: null
     },
     {
-      title: 'Portfolio Website',
-      description: 'Ce portfolio est une application web dynamique développée avec Angular, qui me permet de présenter mon parcours, mes compétences, mes projets et mes services de manière professionnelle et interactive. Il reflète à la fois mon identité visuelle et mes compétences techniques, tout en offrant une expérience utilisateur fluide, responsive et moderne.',
-      image: 'assets/logo/logo-init.png',
-      technologies: ['Angular', 'TypeScript', 'Responsive Design'],
+      title: 'EQuickAsset - Gestion de patrimoine',
+      description: 'Digitalisation de la gestion de patrimoine pour le suivi et la valorisation des actifs, avec une application web et une application Android.',
+      image: 'assets/projects/equickasset.jpeg',
+      technologies: ['Spring MVC', 'Java EE', 'Angular', 'Java', 'SQLite', 'Android Studio'],
       features: [
-        'Design entièrement responsive',
-        'Navigation à défilement fluide',
-        'Présentation interactive des projets',
-        'Section compétences techniques avec barres de progression',
-        'Formulaire de contact dynamique'
+        'Application web avec API RESTful',
+        'Application Android native (Java & SQLite)',
+        'Suivi et valorisation des actifs'
       ],
       liveUrl: null,
-      githubUrl: 'https://github.com/miandrs/portfolio'
+      githubUrl: null
     }
   ];
+
+  get visibleProjects() {
+    return this.projects.slice(0, this.visibleCount);
+  }
+
+  get hasMore(): boolean {
+    return this.visibleCount < this.projects.length;
+  }
+
+  get canShowLess(): boolean {
+    return !this.hasMore && this.projects.length > this.initialCount;
+  }
+
+  loadMore(): void {
+    this.visibleCount = Math.min(this.visibleCount + this.step, this.projects.length);
+  }
+
+  showLess(): void {
+    this.visibleCount = this.initialCount;
+  }
+
+  trackByTitle(_: number, project: { title: string }) {
+    return project.title;
+  }
 }

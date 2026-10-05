@@ -2,20 +2,29 @@
     <div class="container">
         <h2 class="section-title">Compétences & Technologies</h2>
         <p class="section-subtitle">
-            Voici les technologies avec lesquelles j’ai de l’expérience et que je continue à perfectionner.
+            Développeur Fullstack spécialisé en Java et Spring Boot, avec une solide expérience Angular
+            et Node.js. Voici les technologies que j'utilise au quotidien et que je continue à perfectionner.
         </p>
-        
+
+        <div class="core-stack">
+            <span class="core-label">Stack principale</span>
+            <span class="core-tag" *ngFor="let tech of coreStack">{{ tech }}</span>
+        </div>
+
         <div class="skills-grid">
             <div class="skill-category" *ngFor="let category of skillCategories">
-                <h3 class="category-title">{{ category.title }}</h3>
+                <h3 class="category-title">
+                    <span class="category-icon">{{ category.icon }}</span>
+                    {{ category.title }}
+                </h3>
                 <div class="skills-list">
                     <div class="skill-item" *ngFor="let skill of category.skills">
                         <div class="skill-info">
                             <span class="skill-name">{{ skill.name }}</span>
-                            <!-- <span class="skill-level">{{ skill.level }}%</span> -->
+                            <span class="skill-level">{{ getLevelLabel(skill.level) }}</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" 
+                            <div class="skill-progress"
                                 [style.width.%]="skill.level"
                                 [style.background]="getSkillColor(skill.level)"></div>
                         </div>
@@ -23,12 +32,17 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="tools-section">
-            <h3 class="tools-title">Architecture & Modélisation</h3>
+            <h3 class="tools-title">Architecture, Modélisation & Données</h3>
             <div class="tools-grid">
                 <div class="tool-item" *ngFor="let tool of tools">
-                    <img [ngSrc]="tool.icon" width="40" height="40" alt="icon" class="tool-icon" loading="lazy">
+                    <ng-container *ngIf="tool.icon; else emojiIcon">
+                        <img [ngSrc]="tool.icon" width="40" height="40" [alt]="tool.name" class="tool-icon" loading="lazy">
+                    </ng-container>
+                    <ng-template #emojiIcon>
+                        <span class="tool-emoji">{{ tool.emoji }}</span>
+                    </ng-template>
                     <span class="tool-name">{{ tool.name }}</span>
                 </div>
             </div>

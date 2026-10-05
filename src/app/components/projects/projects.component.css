@@ -144,6 +144,174 @@
     font-weight: bold;
 }
 
+.project-card {
+    animation: fadeInUp 0.5s ease both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- Load more area ---------- */
+.load-more-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 3.5rem;
+}
+
+.load-more-count {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #6b7280;
+}
+
+.load-more-progress {
+    width: 200px;
+    height: 6px;
+    background: #e5e7eb;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.load-more-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #2563eb, #60a5fa);
+    border-radius: 999px;
+    transition: width 0.5s ease;
+}
+
+.load-more-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* ---------- Button ---------- */
+.load-more-btn {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.9rem 2.2rem;
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Shine sweep */
+.load-more-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+    transform: skewX(-20deg);
+    transition: left 0.6s ease;
+}
+
+.load-more-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(37, 99, 235, 0.4);
+}
+
+.load-more-btn:hover::before {
+    left: 130%;
+}
+
+.load-more-btn:active {
+    transform: translateY(0) scale(0.97);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+.load-more-btn:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.4);
+    outline-offset: 3px;
+}
+
+/* Arrow icon */
+.btn-icon {
+    transition: transform 0.3s ease;
+    animation: bounceDown 1.6s ease-in-out infinite;
+}
+
+.btn-icon.up {
+    transform: rotate(180deg);
+    animation: none;
+}
+
+.load-more-btn:hover .btn-icon:not(.up) {
+    animation-play-state: paused;
+    transform: translateY(3px);
+}
+
+.load-more-btn:hover .btn-icon.up {
+    transform: rotate(180deg) translateY(3px);
+}
+
+@keyframes bounceDown {
+    0%, 100% { transform: translateY(-2px); }
+    50%      { transform: translateY(3px); }
+}
+
+/* Secondary variant */
+.load-more-btn.secondary {
+    background: white;
+    color: #2563eb;
+    box-shadow: inset 0 0 0 2px #2563eb, 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.load-more-btn.secondary:hover {
+    background: #eff6ff;
+    box-shadow: inset 0 0 0 2px #2563eb, 0 10px 20px rgba(37, 99, 235, 0.15);
+}
+
+.load-more-btn.secondary::before {
+    display: none;
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+    .btn-icon,
+    .load-more-btn,
+    .load-more-btn::before,
+    .load-more-progress-bar {
+        animation: none;
+        transition: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .load-more-actions {
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .load-more-btn {
+        justify-content: center;
+    }
+}
+
 @media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr;

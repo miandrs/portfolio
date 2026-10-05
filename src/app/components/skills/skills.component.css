@@ -115,6 +115,80 @@
     color: #374151;
 }
 
+/* ---------- Core stack strip ---------- */
+.core-stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 3rem;
+}
+
+.core-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #6b7280;
+    margin-right: 0.5rem;
+}
+
+.core-tag {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+}
+
+/* ---------- Replace existing rules ---------- */
+.category-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.category-icon {
+    font-size: 1.4rem;
+}
+
+.skill-level {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #2563eb;
+    background: #eff6ff;
+    padding: 0.1rem 0.6rem;
+    border-radius: 999px;
+}
+
+.tool-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.tool-emoji {
+    font-size: 2rem;
+    line-height: 40px;
+}
+
+@media (max-width: 768px) {
+    .core-label {
+        width: 100%;
+        text-align: center;
+        margin: 0 0 0.25rem;
+    }
+}
+
 @media (max-width: 768px) {
     .skills-grid {
         grid-template-columns: 1fr;
