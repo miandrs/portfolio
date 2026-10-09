@@ -25,7 +25,7 @@ export class ThemeService {
       const saved = localStorage.getItem(this.KEY) as Theme | null;
       if (saved === 'light' || saved === 'dark') return saved;
     } catch {}
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return 'light';
   }
 
   private apply(theme: Theme) {

@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--header-bg);
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: all 0.3s ease;
@@ -22,7 +22,7 @@
 .logo-text {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #2563eb;
+    color: var(--primary);
 }
 
 .logo-icon {
@@ -30,9 +30,8 @@
 }
 
 .logo-icon:hover {
-    border: 4px solid #e0e0e0; 
-    border-radius: 50%; 
     border: 5px solid #2196f3;
+    border-radius: 50%;
     margin: 0 auto;
 }
 
@@ -48,30 +47,58 @@
 }
 
 .nav-link {
-    color: #4b5563;
+    color: var(--text-soft);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
 }
 
-.nav-link:hover, .theme-toggle:hover {
-    color: #2563eb;
+.nav-link:hover {
+    color: var(--primary);
 }
 
-.nav-link::after, .theme-toggle::after {
+.nav-link::after {
     content: '';
     position: absolute;
     bottom: -5px;
     left: 0;
     width: 0;
     height: 2px;
-    background: #2563eb;
+    background: var(--primary);
     transition: width 0.3s ease;
 }
 
 .nav-link:hover::after {
     width: 100%;
+}
+
+/* Wrapper for theme button + hamburger */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* Theme toggle */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-soft);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+    transform: rotate(15deg);
 }
 
 .mobile-menu-btn {
@@ -87,7 +114,7 @@
 .hamburger-line {
     width: 25px;
     height: 3px;
-    background: #4b5563;
+    background: var(--text-soft);
     transition: all 0.3s ease;
 }
 
@@ -103,48 +130,26 @@
     transform: rotate(-45deg) translate(7px, -7px);
 }
 
-/* NEW: wrapper for theme button + hamburger */
-.nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-/* NEW: theme toggle */
-.theme-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid var(--border);
-    background: transparent;
-    color: var(--text-muted);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
 @media (max-width: 768px) {
     .nav-links {
         position: fixed;
         top: 70px;
         left: 0;
         right: 0;
-        background: white;
+        background: var(--surface);
         flex-direction: column;
         padding: 2rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 6px var(--shadow);
         transform: translateY(-100vh);
         opacity: 0;
         transition: all 0.3s ease;
     }
-    
+
     .nav-links.nav-open {
         transform: translateY(0);
         opacity: 1;
     }
-    
+
     .mobile-menu-btn {
         display: flex;
     }

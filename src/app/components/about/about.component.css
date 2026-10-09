@@ -1,5 +1,5 @@
 .section {
-    background: white;
+    background: var(--bg);
 }
 
 .about-content {
@@ -11,7 +11,7 @@
 
 .intro-text {
     font-size: 1.1rem;
-    color: #4b5563;
+    color: var(--text-soft);
     margin-bottom: 2rem;
     line-height: 1.8;
 }
@@ -44,17 +44,17 @@
 .highlight-item h4 {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #1f2937;
+    color: var(--text-heading);
     margin-bottom: 0.25rem;
 }
 
 .highlight-item p {
-    color: #6b7280;
+    color: var(--text-muted);
     line-height: 1.5;
 }
 
 .closing-text {
-    color: #4b5563;
+    color: var(--text-soft);
     line-height: 1.8;
 }
 
@@ -62,7 +62,7 @@
     position: relative;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 40px var(--shadow);
 }
 
 .workspace-img {
@@ -103,19 +103,18 @@
 .tech-icon {
     object-fit: contain;
     border-radius: 12px;
-    /*background-color: white; /* optional: background for contrast */
     padding: 1px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s;
 }
 
 .angular, .typescript {
-    width: 50px;        
+    width: 50px;
     height: 50px;
 }
 
 .node {
-    width: 60px;        
+    width: 60px;
     height: 60px;
 }
 
@@ -124,6 +123,7 @@
     height: 110px;
 }
 
+/* Logos that need a white background in both themes */
 .node, .express {
     background-color: white;
 }
@@ -153,24 +153,24 @@
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
+
     .highlights {
         gap: 1rem;
     }
-    
+
     .highlight-item {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .highlight-icon {
         align-self: center;
     }
-    
+
     .workspace-img {
         height: 250px;
     }
-    
+
     .floating-element {
         display: none;
     }

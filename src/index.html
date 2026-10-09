@@ -9,11 +9,12 @@
     <link rel="shortcut icon" href="assets/logo/logo-icon.png" type="image/x-icon">
     <script>
       (function () {
+        var t = 'light';
         try {
-          var t = localStorage.getItem('theme');
-          if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-          document.documentElement.setAttribute('data-theme', t);
+          var saved = localStorage.getItem('theme');
+          if (saved === 'light' || saved === 'dark') t = saved;
         } catch (e) {}
+        document.documentElement.setAttribute('data-theme', t);
       })();
     </script>
   </head>

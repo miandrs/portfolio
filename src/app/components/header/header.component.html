@@ -4,7 +4,13 @@
             <div class="nav-content">
                 <div class="logo">
                     <a href="#home" class="flex items-center miandrs">
-                        <img ngSrc="assets/logo/logo.png" width="60" height="60" class="logo-icon" alt="Jean Bruno" priority>
+                        @if (themeService.theme() === 'dark') {
+                            <img ngSrc="assets/logo/logo-icon-header.png" width="60" height="60"
+                                class="logo-icon" alt="Jean Bruno" priority>
+                        } @else {
+                            <img ngSrc="assets/logo/logo.png" width="60" height="60"
+                                class="logo-icon" alt="Jean Bruno" priority>
+                        }
                     </a>
                 </div>
                 

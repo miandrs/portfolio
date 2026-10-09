@@ -77,7 +77,7 @@ export class SkillsComponent {
   ];
 
   tools: Tool[] = [
-    { name: 'UML', icon: 'assets/icons/dbschema.png' },
+    { name: 'UML', icon: 'assets/icons/uml.png' },
     { name: 'Mérise', icon: 'assets/icons/dbschema.png' },
     { name: 'MySQL', icon: 'assets/icons/mysql.png' },
     { name: 'MongoDB', icon: 'assets/icons/compass.ico' }
