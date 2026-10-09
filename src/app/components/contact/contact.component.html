@@ -83,7 +83,7 @@
             </div>
             
             <div class="contact-form-container">
-                <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+                <form class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                     <!-- Name Field -->
                     <div class="form-group">
                         <label for="name">Nom</label>
@@ -174,9 +174,12 @@
                         <span *ngIf="isSubmitting">Envoi en cours...</span>
                     </button>
 
-                    <!-- Success Message -->
                     <div class="success-message" *ngIf="showSuccess">
                         ✅ Merci ! Votre message a bien été envoyé.
+                    </div>
+
+                    <div class="error-message-box" *ngIf="showError">
+                        ❌ L'envoi a échoué. Veuillez réessayer ou m'écrire directement par email.
                     </div>
                 </form>
             </div>

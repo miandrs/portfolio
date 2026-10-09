@@ -5,16 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/">
 
-    <!-- Title: 50-60 characters, name + role + main skills -->
-    <title>Jean Bruno | Full-Stack Developer (Angular, Spring Boot, Node.js)</title>
+    <title>Jean Bruno | Développeur Full-Stack Angular & Spring Boot</title>
 
-    <!-- Description: 150-160 characters. Yours has a typo ("Fullsatck developper") -->
-    <meta name="description" content="Jean Bruno, full-stack developer building web apps with Angular, TypeScript, Node.js and Spring Boot. Discover my projects and get in touch.">
+    <meta name="description" content="Jean Bruno, développeur full-stack : applications web avec Angular, TypeScript, Node.js et Spring Boot. Découvrez mes projets et contactez-moi.">
     <meta name="author" content="Jean Bruno Rakotomiandrisoa">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://jean-bruno.vercel.app/">
 
-    <!-- Browser UI color, follows the theme -->
+    <!-- Couleur de l'interface du navigateur, selon le thème -->
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
 
@@ -22,13 +20,14 @@
 
     <!-- Open Graph (LinkedIn, Facebook, WhatsApp...) -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Jean Bruno | Full-Stack Developer">
-    <meta property="og:description" content="Full-stack developer: Angular, TypeScript, Node.js, Spring Boot. See my projects.">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Jean Bruno | Développeur Full-Stack">
+    <meta property="og:description" content="Développeur full-stack : Angular, TypeScript, Node.js, Spring Boot. Découvrez mes projets.">
     <meta property="og:url" content="https://jean-bruno.vercel.app/">
     <meta property="og:image" content="https://jean-bruno.vercel.app/assets/og-image.png">
     <meta property="og:site_name" content="Jean Bruno">
 
-    <!-- Structured data: helps Google understand who you are -->
+    <!-- Données structurées : aident Google à comprendre qui vous êtes -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -36,7 +35,7 @@
       "name": "Jean Bruno Rakotomiandrisoa",
       "url": "https://jean-bruno.vercel.app/",
       "image": "https://jean-bruno.vercel.app/assets/logo/logo.png",
-      "jobTitle": "Full-Stack Developer",
+      "jobTitle": "Développeur Full-Stack",
       "knowsAbout": ["Java", "Spring Boot", "Angular", "TypeScript", "Node.js", "Express"],
       "sameAs": [
         "https://github.com/miandrs",
@@ -45,6 +44,7 @@
     }
     </script>
 
+    <!-- Thème : clair par défaut, évite le flash au chargement -->
     <script>
       (function () {
         var t = 'light';
@@ -56,4 +56,25 @@
       })();
     </script>
   </head>
-  ...
+  <body>
+    <app-root>
+      <div style="display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f5f5f5;">
+        <div style="text-align: center;">
+          <img src="assets/logo/logo-icon.png" style="border-radius: 50%; width: 150px; height: 150px; animation: spin 1s linear infinite;" alt="Logo de Jean Bruno">
+          <p style="margin-top: 16px; font-family: 'Roboto', sans-serif; color: #616161;">Chargement...</p>
+        </div>
+      </div>
+      <style>
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+      </style>
+    </app-root>
+
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+  </body>
+</html>

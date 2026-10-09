@@ -143,6 +143,15 @@
     font-size: 0.875rem;
 }
 
+.error-message-box {
+    background: rgba(239, 68, 68, 0.12);
+    color: #b91c1c;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+}
+
 .submit-btn {
     padding: 1rem;
     font-size: 1.1rem;
