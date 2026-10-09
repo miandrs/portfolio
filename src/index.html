@@ -7,6 +7,15 @@
     <meta name="description" content="Fullsatck developper">
     <base href="/">
     <link rel="shortcut icon" href="assets/logo/logo-icon.png" type="image/x-icon">
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <app-root>

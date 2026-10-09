@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +11,7 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
 })
 export class HeaderComponent {
   isMenuOpen = false;
+  themeService = inject(ThemeService);
   
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
@@ -18,4 +20,6 @@ export class HeaderComponent {
   closeMenu() {
     this.isMenuOpen = false;
   }
+
+  toggleTheme() { this.themeService.toggle(); }
 }
